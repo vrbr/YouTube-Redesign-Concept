@@ -7,10 +7,15 @@ body {
     font-weight: 400;
 }
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     margin-bottom: 30px;
     padding: 20px 70px 20px 32px;
+    background-color: #fff;
 }
 .menu-button {
     display: flex;
@@ -21,7 +26,7 @@ body {
     width: 20px;
     height: 17px;
     border: none;
-    background-color: transparent;
+    background-color: #fff;
     cursor: pointer;
 }
 .menu-button__line {
@@ -90,7 +95,14 @@ body {
 
 /*sidebar*/
 .sidebar {
+    position: fixed;
+    left: 0;
+    top: 114px;
+    width: 15%;
+    height: calc(100% - 114px);
     padding-left: 32px;
+    background-color: #fff;
+    overflow-y: auto;
 }
 .nav-menu {
     padding: 0;
@@ -117,6 +129,7 @@ body {
 .nav-item svg {
     fill: #000;
     opacity: 0.24;
+    z-index: -1;
 }
 .nav-text {
     margin-left: 13px;
@@ -135,4 +148,11 @@ body {
     width: 26px;
     height: 26px;
     border-radius: 50%;
+}
+
+/*content*/
+.content {
+    margin-top: 85px;
+    padding-left: 18%;
+    width: 100%;
 }
