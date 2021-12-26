@@ -1,0 +1,85 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px 70px 20px 32px;
+}
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 28px;
+    padding: 0;
+    width: 20px;
+    height: 17px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.menu-button__line {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: #1F2022;
+    border-radius: 20px;
+}
+.logo {
+    margin-right: 59px;
+}
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 830px;
+    width: 50%;
+    padding-right: 17px;
+    background-color: #EBEBEB;
+    border-radius: 22px;
+}
+.input-search {
+    padding: 12px 23px;
+    background-color: transparent;
+    border: none;
+}
+.button-search {
+    padding: 0;
+    width: 19px;
+    height: 19px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.icon-search {
+    fill: #000;
+}
+.icons__link {
+    text-decoration: none;
+}
+.icons__link:hover {
+    opacity: 0.7;
+}
+.icons__link:not(:last-child) {
+    margin-right: 50px;
+}
+.icons__link > svg {
+    fill: #000;
+    opacity: 0.24;
+}
+.user {
+    margin-left: 45px;
+}
+.user__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
