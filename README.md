@@ -1,4 +1,5 @@
 # YouTube-Redesign-Concept
 Интенсив от GLO Academy
 
-Использованы svg-спрайты
+- swiperjs
+- svg-спрайты
