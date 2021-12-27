@@ -7,10 +7,16 @@ body {
     font-weight: 400;
 }
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     margin-bottom: 30px;
     padding: 20px 70px 20px 32px;
+    background-color: #fff;
+    z-index: 99;
 }
 .menu-button {
     display: flex;
@@ -21,7 +27,7 @@ body {
     width: 20px;
     height: 17px;
     border: none;
-    background-color: transparent;
+    background-color: #fff;
     cursor: pointer;
 }
 .menu-button__line {
@@ -90,7 +96,14 @@ body {
 
 /*sidebar*/
 .sidebar {
+    position: fixed;
+    left: 0;
+    top: 114px;
+    width: 235px;
+    height: calc(100% - 114px);
     padding-left: 32px;
+    background-color: #fff;
+    overflow-y: auto;
 }
 .nav-menu {
     padding: 0;
@@ -135,4 +148,153 @@ body {
     width: 26px;
     height: 26px;
     border-radius: 50%;
+}
+
+/*content*/
+.content {
+    margin-top: 85px;
+    padding-top: 30px;
+    padding-left: 255px;
+    width: 100%;
+}
+.channel {
+    position: relative;
+    margin-bottom: 49px;
+}
+.channel__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 83%;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 33px;
+    color: #19202C;
+}
+.channel__rec {
+    font-size: 16px;
+    line-height: 20px;
+    color: #C2C2C2; 
+}
+.channel__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.channel-second .channel__text {
+    margin-left: 0;
+}
+.channel__text {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.subscribe {
+    position: absolute;
+    top: 0;
+    right: 17%;
+    margin-top: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    background: #FF0000;
+    border: none;
+    border-radius: 20px;
+}
+.video-card {
+    width: 250px;
+}
+.video-thumb {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    cursor: pointer;
+}
+.channel-first__slider .video-thumb,
+.channel-third__slider .video-thumb {
+    width: 250px;
+    height: 150px;
+}
+.channel-second__slider .video-thumb {
+    width: 540px;
+    height: 250px;
+}
+.trumbnail {
+    object-fit: cover;
+}
+.channel-first__slider .trumbnail,
+.channel-third__slider .trumbnail {
+    width: 250px;
+    height: 150px;
+}
+.channel-second__slider .trumbnail {
+    width: 540px;
+    height: 250px;
+}
+.video-duration {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 3px 9px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    background: rgba(0,0,0,0.3);
+    border-radius: 12px;
+}
+.video-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #19202C;
+}
+.video-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    line-height: 16px;
+    color: #C2C2C2;
+}
+.video-info__counter {
+    display: flex;
+}
+.views {
+    margin-right: 5px;
+}
+.views::after {
+    display: inline-block;
+    content: "";
+    margin-left: 5px;
+    width: 2px;
+    height: 2px;
+    vertical-align: middle;
+    background-color: #C2C2C2;
+}
+.channel-first__slider .swiper-slide,
+.channel-third__slider .swiper-slide {
+    width: 250px;
+}
+.channel-second__slider .swiper-slide,
+.channel-second__slider .video-card {
+    width: 540px;
+}
+.slider-buttons {
+    position: absolute;
+    right: 9%;
+    top: 0;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 66px;
+}
+.channel-button {
+    cursor: pointer;
+}
+.channel-button .icon:hover {
+    opacity: 0.7;
 }
