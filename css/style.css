@@ -46,6 +46,7 @@ body {
     justify-content: space-between;
     max-width: 830px;
     width: 50%;
+    margin-right: 40px;
     padding-right: 17px;
     background-color: #EBEBEB;
     border-radius: 22px;
@@ -163,6 +164,7 @@ body {
 }
 .channel__title {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 30px;
     width: 83%;
@@ -192,7 +194,7 @@ body {
 .subscribe {
     position: absolute;
     top: 0;
-    right: 17%;
+    right: 170px;
     margin-top: 5px;
     padding: 10px 20px;
     font-size: 16px;
@@ -202,12 +204,10 @@ body {
     border: none;
     border-radius: 20px;
 }
-.video-card {
-    width: 250px;
-}
 .video-thumb {
     position: relative;
     overflow: hidden;
+    width: 100%;
     border-radius: 14px;
     cursor: pointer;
 }
@@ -221,6 +221,7 @@ body {
     height: 250px;
 }
 .trumbnail {
+    width: 100%;
     object-fit: cover;
 }
 .channel-first__slider .trumbnail,
@@ -284,7 +285,7 @@ body {
 }
 .slider-buttons {
     position: absolute;
-    right: 9%;
+    right: 70px;
     top: 0;
     margin-top: 12px;
     display: flex;
@@ -292,9 +293,143 @@ body {
     justify-content: space-between;
     width: 66px;
 }
+.channel-second .slider-buttons {
+    top: -9px;
+}
 .channel-button {
     cursor: pointer;
 }
 .channel-button .icon:hover {
     opacity: 0.7;
+}
+.mobile-sidebar,
+.mobile-search {
+    display: none;
+}
+
+@media (max-width: 1160px) {
+    .channel__rec {
+        flex: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 860px) {
+    .icons {
+        display: none;
+    }
+    .user {
+        margin-right: auto;
+    }
+    .subscribe {
+        top: 90px;
+        left: 0;
+        right: 0;
+    }
+    .channel-third .channel__title {
+        margin-bottom: 77px;
+    }
+}
+
+@media (max-width: 640px) {
+    .menu-button,
+    .sidebar,
+    .slider-buttons {
+        display: none;
+    }
+    .channel {
+        margin-bottom: 120px;
+    }
+    .content {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .mobile-sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        background-color: #fff;
+        z-index: 99;
+    }
+    .mobile-sidebar .nav-link {
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile-sidebar .nav-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 0;
+        padding-top: 13px;
+        padding-bottom: 11px;
+        border-top: 1px solid #F1F1F1;
+    }
+    .mobile-sidebar .nav-text {
+        margin-left: 0;
+        font-size: 10px;
+        line-height: 13px;
+    }
+    .mobile-sidebar .nav-item {
+        margin-bottom: 0;
+    }
+    .mobile-sidebar .nav-item svg {
+        margin-bottom: 5px;
+    }
+    .header {
+        padding: 12px 16px;
+    }
+    .input-group {
+        position: fixed;
+        top: -100px;
+        left: -3px;
+        opacity: 0;
+        width: 83%;
+        margin-left: 16px;
+        transition: top 0.2s;
+    }
+    .input-group.is-open {
+        top: 13px;
+        opacity: 1;
+    }
+    .mobile-search {
+        display: block;
+        margin-left: auto;
+    }
+    .user {
+        margin-right: 0;
+        margin-left: 20px;
+    }
+    .slider-buttons {
+        right: 16px;
+    }
+    .channel__title {
+        width: 100%;
+    }
+    .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .swiper-slide:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    .channel-first__slider .swiper-slide,
+    .channel-third__slider .swiper-slide,
+    .channel-second__slider .swiper-slide,
+    .channel-second__slider .video-card {
+        width: 100%;
+    }
+    .channel-first__slider .video-thumb,
+    .channel-third__slider .video-thumb,
+    .channel-second__slider .video-thumb {
+        width: 100%;
+        height: 300px;
+    }
+    .channel-first__slider .trumbnail,
+    .channel-third__slider .trumbnail,
+    .channel-second__slider .trumbnail {
+        width: 100%;
+        height: 300px;
+    }
 }
